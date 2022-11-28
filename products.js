@@ -31,6 +31,14 @@ function listar_por_categoria(cate) {
   });
 }
 
+function listar_por_valor(valor_minimo, valor_maximo) {
+  produtos.forEach((p) => {
+    if (p.valor >= valor_minimo && p.valor <= valor_maximo) {
+      console.log(p);
+    }
+  });
+}
+
 function listar() {
   produtos.forEach((p) => {
     console.log(p);
@@ -39,3 +47,4 @@ function listar() {
 
 const escolar = 'Escolar';
 listar_por_categoria(escolar);
+listar_por_valor(5, 10);
